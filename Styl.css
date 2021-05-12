@@ -1,0 +1,174 @@
+
+body{
+  
+    padding: 0px;
+    margin: 0px;
+    background-color: bisque;
+    margin-bottom: 100px;
+}
+.btn a {
+    margin-left: 150px;
+    
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 18px;
+    border-radius: 15px;
+    background:#277804;
+    margin-top: 80px;
+}
+
+.book-page{
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate(-50%,-50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0,0,0, .5), 0 20px 100px rgba(0,0,0, .5);
+    background: #fff;
+    transition: 1s;
+    margin-top: 50px;
+}
+.page-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* box-sizing: border-box; */
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+.page-img img{
+    width: 100%;
+    height: 100%;
+}
+.book-page:hover .page-img{
+    transform: rotateY(-135deg);
+}
+.book-page:hover{
+    transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg) ;
+    box-shadow: inset 20px 0 50px rgba(0,0,0, .5), 0px 20px 100px rgba(0,0,0, .5) ;
+}
+.book-page::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background: #000;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+    
+
+}
+.book-page:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #000;
+    transform-origin: left;
+    transform: skewy(-45deg);
+}
+.book_text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: -1;
+    text-align: center;
+}
+.book_text h1{
+    font-size: 40px;
+    color: #277804;
+    text-transform: uppercase;
+}
+.book_text h1 span{
+    font-size: 20px;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.book_text p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13;
+    font-weight: 500;
+    
+    
+}
+.reg{
+    text-align: left;
+    margin-left: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.reg span{
+    text-transform: none;
+}
+.arb{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.countdown-box {
+    display: flex;
+    width: 300px;
+    margin-top: 10px;
+    transition: .5s all cubic-bezier(0.50,-0.35,0.50,1.35);
+
+}
+.countdown-box>div {
+    width: 200px;
+    align-self: flex-end;
+    margin-right: 11px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+   }
+
+   .countdown-box .days {
+    height: 70px;
+    background: #00c3e8;
+    box-shadow: 0 0 10px rgba(0,195,232, .8);
+    color: #fff;
+}
+
+ .countdown-box .hours {
+    height: 100px;
+    background:#f86bce;
+    box-shadow: 0 0 10px rgba(248,107,206, .8);
+    color: #fff;
+}
+
+ .countdown-box .minutes  {
+    height: 130px;
+    background:#00cca4;
+    box-shadow: 0 0 10px rgba(0,204,164, .8);
+    color: #fff;
+}
+
+.countdown-box .seconds {
+    height: 105px;
+    background:#f0963a;
+    box-shadow: 0 0 10px rgba(240,150,58, .8);
+    color: #fff;
+}
+.countdown-box .count {
+    font-size: 9px;
+    font-weight: 200;
+    line-height: 1.2;
+    
+}
+.countdown-box .box-text{
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 40;
+    color: #000;
+}
